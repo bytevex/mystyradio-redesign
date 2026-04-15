@@ -20,6 +20,23 @@ vergeleken met de originele site:
 
 niet alles van het origineel is hier. dit is meer een proof of concept van hoe het volgens mij zou kunnen.
 
+## screenshots
+
+**home page**
+![home](images/home.png)
+
+**live chat**
+![chat](images/chat.png)
+
+**dj overzicht**
+![djs](images/djs.png)
+
+**weekprogramma**
+![programma](images/programa.png)
+
+**nieuws**
+![nieuws](images/nieuws.png)
+
 ## wat werkt er
 
 **audio player**
