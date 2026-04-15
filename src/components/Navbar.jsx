@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, LogIn, UserPlus } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Navbar() {
@@ -54,7 +54,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1 lg:gap-2">
+          <div className="hidden md:flex items-center gap-1 lg:gap-3">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -78,6 +78,23 @@ export default function Navbar() {
                 )}
               </Link>
             ))}
+
+            <div className="h-6 w-px bg-white/10 mx-1" />
+
+            <Link
+              to="/login"
+              className="flex items-center gap-2 px-3 lg:px-4 py-2 text-sm lg:text-base font-medium text-muted hover:text-foreground rounded-lg transition-colors"
+            >
+              <LogIn className="w-4 h-4" />
+              <span className="hidden lg:inline">Inloggen</span>
+            </Link>
+            <Link
+              to="/register"
+              className="flex items-center gap-2 px-3 lg:px-4 py-2 text-sm lg:text-base font-medium bg-gradient-to-r from-primary to-accent text-white rounded-lg hover:shadow-lg hover:scale-105 transition-all"
+            >
+              <UserPlus className="w-4 h-4" />
+              <span className="hidden lg:inline">Registreer</span>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -116,6 +133,23 @@ export default function Navbar() {
                   {link.badge && <span className="w-2 h-2 bg-green-500 rounded-full" />}
                 </Link>
               ))}
+
+              <div className="h-px bg-white/10 my-2" />
+
+              <Link
+                to="/login"
+                className="flex items-center gap-3 px-4 py-3 rounded-lg text-muted hover:bg-white/5 hover:text-foreground transition-colors"
+              >
+                <LogIn className="w-5 h-5" />
+                <span className="font-medium">Inloggen</span>
+              </Link>
+              <Link
+                to="/register"
+                className="flex items-center gap-3 px-4 py-3 rounded-lg bg-gradient-to-r from-primary to-accent text-white font-medium transition-all"
+              >
+                <UserPlus className="w-5 h-5" />
+                <span>Registreer</span>
+              </Link>
             </div>
           </motion.div>
         )}

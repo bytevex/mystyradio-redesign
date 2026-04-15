@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
-import { Music, Wrench } from 'lucide-react'
+import { LogIn, Wrench } from 'lucide-react'
 
-export default function Verzoek() {
+export default function Login() {
   return (
     <div className="min-h-screen pt-16 sm:pt-20">
       <section className="py-20 bg-gradient-to-b from-background via-background to-background-light">
@@ -12,15 +12,14 @@ export default function Verzoek() {
             className="text-center mb-12"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-6">
-              <Music className="w-4 h-4 text-primary-light" />
-              <span className="text-sm font-medium">Verzoeknummer</span>
+              <LogIn className="w-4 h-4 text-primary-light" />
+              <span className="text-sm font-medium">Account</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              Dien een <span className="gradient-text">verzoek</span> in
+              <span className="gradient-text">Inloggen</span>
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              Wil je graag jouw favoriete nummer horen? Het verzoeksysteem wordt momenteel
-              uitgebreid!
+              Toegang tot jouw persoonlijke luisterervaring
             </p>
           </motion.div>
 
@@ -39,31 +38,12 @@ export default function Verzoek() {
                   Tijdelijk niet beschikbaar
                 </h3>
                 <p className="text-muted max-w-xl">
-                  Het verzoeksysteem is momenteel uitgeschakeld wegens uitbreidingen aan het
-                  platform. We werken hard aan nieuwe features om jullie luisterervaring nog beter
-                  te maken!
+                  Het inlogsysteem is momenteel uitgeschakeld wegens uitbreidingen aan het platform.
+                  We werken hard aan nieuwe features om jullie luisterervaring nog beter te maken!
                 </p>
                 <p className="text-muted/70 text-sm mt-4">Excuses voor het ongemak.</p>
               </div>
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="mt-8 p-6 bg-primary/5 border border-primary/10 rounded-xl"
-          >
-            <h3 className="font-semibold mb-2 flex items-center gap-2">
-              <Music className="w-5 h-5 text-primary-light" />
-              Spelregels (straks weer actief)
-            </h3>
-            <ul className="text-sm text-muted space-y-1 ml-7">
-              <li>• Verzoeken worden zo snel mogelijk gedraaid</li>
-              <li>• Maximaal 1 verzoek per persoon per show</li>
-              <li>• Sommige nummers zijn mogelijk niet beschikbaar</li>
-              <li>• Haat, discriminatie en vulgaire teksten zijn niet toegestaan</li>
-            </ul>
           </motion.div>
         </div>
       </section>

@@ -2,12 +2,15 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import StickyPlayer from './components/StickyPlayer'
+import LiveDJBanner from './components/LiveDJBanner'
 import Home from './pages/Home'
 import Programma from './pages/Programma'
 import DJs from './pages/DJs'
 import Nieuws from './pages/Nieuws'
 import Chat from './pages/Chat'
 import Verzoek from './pages/Verzoek'
+import Login from './pages/Login'
+import Register from './pages/Register'
 import { usePlayerStore } from './store/playerStore'
 import { useEffect } from 'react'
 
@@ -27,6 +30,7 @@ function App() {
     <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <div className="flex flex-col min-h-screen">
         <Navbar />
+        <LiveDJBanner />
 
         <main className="flex-grow pb-28">
           <Routes>
@@ -36,6 +40,8 @@ function App() {
             <Route path="/nieuws" element={<Nieuws />} />
             <Route path="/chat" element={<Chat />} />
             <Route path="/verzoek" element={<Verzoek />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </main>
 

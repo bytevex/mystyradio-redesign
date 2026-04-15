@@ -3,7 +3,7 @@ import { persist } from 'zustand/middleware'
 import axios from 'axios'
 
 const STREAM_URL = 'https://radio.mistyradio.org/listen/mistyradio/radio.mp3'
-const API_URL = 'https://radio.mistyradio.org/api/nowplaying/mistyradio'
+const API_URL = '/api/nowplaying/mistyradio' // gebruik proxy
 
 export const usePlayerStore = create(
   persist(
@@ -20,6 +20,8 @@ export const usePlayerStore = create(
 
       listeners: 0,
       isLive: false,
+      liveStreamer: '',
+      broadcastStart: null,
 
       audioRef: null,
 
@@ -96,6 +98,8 @@ export const usePlayerStore = create(
               },
               listeners: data.listeners?.current ?? 0,
               isLive: data.live?.is_live ?? false,
+              liveStreamer: data.live?.streamer_name || '',
+              broadcastStart: data.live?.broadcast_start || null,
             })
           }
         } catch (error) {

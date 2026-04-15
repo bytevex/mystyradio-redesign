@@ -18,9 +18,10 @@ export default defineConfig({
     open: true,
     proxy: {
       '/api': {
-        target: 'https://mistyradio.org',
+        target: 'https://radio.mistyradio.org',
         changeOrigin: true,
         secure: true,
+        rewrite: (path) => path,
       },
     },
   },
